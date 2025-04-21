@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.4/dist/cdn.min.js"
+    ></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <title>EVGA Gun Safezone</title>
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: #ffffff;
+        font-family: 'Segoe UI', sans-serif;
+      }
+
+      .content {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 400px;
+        height: 140px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        box-shadow: 0 0 20px rgba(255, 251, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .content:hover {
+        box-shadow: 0 0 30px rgba(255, 251, 0, 0.5);
+      }
+
+      .info-icon {
+        margin-right: 20px;
+      }
+
+      .info-icon img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #fffb00;
+        transition: all 0.3s ease;
+      }
+
+      .info-icon img:hover {
+        transform: scale(1.1);
+      }
+
+      .main-text {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .mainTitle {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 0;
+        color: #fffb00;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        line-height: 1.2;
+      }
+
+      .description {
+        font-weight: normal;
+        font-size: 14px;
+        padding: 5px 0;
+        color: #ffffff;
+        margin: 0;
+      }
+
+      .discord-link {
+        font-weight: bold;
+        color: #fffb00;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: 5px;
+        display: inline-block;
+      }
+
+      .discord-link:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px #fffb00;
+      }
+    </style>
+  </head>
+  <body x-data="main()" x-init="listen()">
+    <div class="content" x-show="show" x-transition>
+      <div class="info-icon">
+        <img
+          src="https://files.catbox.moe/xe5x4a.png"
+          alt="EVGA Logo"
+        />
+      </div>
+      <div class="main-text">
+        <h1 class="mainTitle">EVGA GUN<br />SAFEZONE</h1>
+        <p class="description">
+          Güvenli bölgeye hoş geldiniz! Silahlarınızı burada kullanmayın.
+        </p>
+        <a
+          href="https://discord.gg/evgagun"
+          target="_blank"
+          class="discord-link"
+          >discord.gg/evgagun</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
